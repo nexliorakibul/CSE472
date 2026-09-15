@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSE472 Lab 05 - Student Workshop Registration System using Fetch and a simple public API">
+    <title>Student Workshop Registration System | CSE472 Lab 05</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <p class="course-label">CSE472 &middot; Web and Internet Programming Lab</p>
+            <h1>Student Workshop Registration System</h1>
+            <p class="header-copy">Lab 05 extends the earlier browser interactions with HTTP requests, Fetch, JSON responses and a simple public API.</p>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="hero-card" aria-labelledby="heroWorkshopTitle">
+            <div>
+                <span class="eyebrow">Project stage 05</span>
+                <h2 id="heroWorkshopTitle">Workshop Information Loader</h2>
+                <p>Workshop details are stored separately in <code>data/workshop.json</code> and are loaded only when the student requests them.</p>
+            </div>
+
+            <dl class="workshop-meta">
+                <div>
+                    <dt>Method</dt>
+                    <dd>GET</dd>
+                </div>
+                <div>
+                    <dt>Expected status</dt>
+                    <dd>200 OK</dd>
+                </div>
+                <div>
+                    <dt>Response format</dt>
+                    <dd>JSON</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="fetch-card" aria-labelledby="fetchHeading">
+            <div class="section-heading">
+                <span class="eyebrow">Local Fetch request</span>
+                <h2 id="fetchHeading">Workshop Details</h2>
+                <p>Click the button to request <code>data/workshop.json</code>. Six JSON values will be displayed after a successful response.</p>
+            </div>
+
+            <button type="button" onclick="loadWorkshop()">Load Workshop Details</button>
+            <p id="loadMessage" class="result-message" aria-live="polite">Workshop data has not been requested yet.</p>
+
+            <div class="details-grid">
+                <p><strong>Title:</strong> <span id="workshopTitle">Not loaded</span></p>
+                <p><strong>Date:</strong> <span id="workshopDate">Not loaded</span></p>
+                <p><strong>Venue:</strong> <span id="workshopVenue">Not loaded</span></p>
+                <p><strong>Seats:</strong> <span id="workshopSeats">Not loaded</span></p>
+                <p><strong>Instructor:</strong> <span id="workshopInstructor">Not loaded</span></p>
+                <p><strong>Duration:</strong> <span id="workshopDuration">Not loaded</span></p>
+            </div>
+        </section>
+
+        <section class="interaction-grid" aria-label="Earlier JavaScript interactions">
+            <article class="action-card">
+                <div class="number-badge">01</div>
+                <h2>Registration status</h2>
+                <p id="registrationStatus" class="result-message" aria-live="polite">Click the button to check the status.</p>
+                <button type="button" onclick="checkRegistration()">Check Registration Status</button>
+            </article>
+
+            <article class="action-card">
+                <div class="number-badge">02</div>
+                <h2>Seat availability</h2>
+                <p id="seatMessage" class="result-message" aria-live="polite">Seat information will appear here.</p>
+                <button type="button" onclick="checkSeats()">Check Seat Availability</button>
+            </article>
+        </section>
+
+        <section class="registration-card" aria-labelledby="registrationHeading">
+            <div class="section-heading">
+                <span class="eyebrow">Earlier-stage continuity</span>
+                <h2 id="registrationHeading">Workshop Registration</h2>
+                <p>The form keeps the earlier input-reading work and also demonstrates saving a simple registration object as JSON in <code>localStorage</code>.</p>
+            </div>
+
+            <form action="#" onsubmit="return false;">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="studentName">Full Name</label>
+                        <input type="text" id="studentName" name="studentName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="studentId">Student ID</label>
+                        <input type="text" id="studentId" name="studentId" placeholder="Enter your student ID" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="studentEmail">Email Address</label>
+                        <input type="email" id="studentEmail" name="studentEmail" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="department">Department</label>
+                        <select id="department" name="department" required>
+                            <option value="">Select a department</option>
+                            <option value="CSE">Computer Science and Engineering</option>
+                            <option value="EEE">Electrical and Electronic Engineering</option>
+                            <option value="BBA">Business Administration</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button type="button" onclick="showGreeting()">Show Greeting</button>
+                    <button type="button" onclick="saveRegistration()">Save Registration</button>
+                    <button type="button" class="secondary-button" onclick="loadSavedRegistration()">Load Saved Registration</button>
+                </div>
+                <p id="greetingMessage" class="result-message wide" aria-live="polite">Your personalised greeting will appear here.</p>
+                <p id="saveMessage" class="result-message wide" aria-live="polite">No registration has been saved during this session.</p>
+                <p id="savedRegistration" class="result-message wide" aria-live="polite">Saved registration details will appear here.</p>
+            </form>
+        </section>
+
+        <section class="api-card" aria-labelledby="apiHeading">
+            <div class="section-heading">
+                <span class="eyebrow">Public API practice</span>
+                <h2 id="apiHeading">JSONPlaceholder User</h2>
+                <p>This request uses the practice endpoint <code>https://jsonplaceholder.typicode.com/users/2</code> and displays only the returned name and email.</p>
+            </div>
+            <button type="button" onclick="loadSampleUser()">Load Sample User</button>
+            <p id="apiUser" class="result-message" aria-live="polite">No API data loaded yet.</p>
+        </section>
+
+        <section class="independent-card" aria-labelledby="extraFeatureHeading">
+            <div>
+                <span class="eyebrow">Small independent improvement</span>
+                <h2 id="extraFeatureHeading">Venue reminder</h2>
+                <p id="venueMessage" class="result-message" aria-live="polite">Click the button to display a short venue reminder.</p>
+            </div>
+            <button type="button" onclick="showVenue()">Show Venue Note</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Workshop Registration System &middot; Southeast University</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
