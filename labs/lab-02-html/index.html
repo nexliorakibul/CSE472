@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SEU Tech Event Information and Registration Page for CSE 472 Lab Report 2">
+    <title>SEU Tech Event Information and Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <p class="course-label">CSE 472 &middot; Web and Internet Programming Lab</p>
+            <h1>SEU Tech Event Information and Registration Page</h1>
+            <p class="tagline">Explore the event, review the schedule, and register for a hands-on technology experience at Southeast University.</p>
+            <div class="event-meta" aria-label="Event summary">
+                <span>24 September 2026</span>
+                <span>10:00 AM &ndash; 4:00 PM</span>
+                <span>SEU Permanent Campus</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#register">Register</a>
+    </nav>
+
+    <main class="page-shell">
+        <section id="about" class="card hero-section">
+            <div class="hero-copy">
+                <p class="eyebrow">About the event</p>
+                <h2>SEU Tech Innovation Day 2026</h2>
+                <div class="info-block">
+                    <p>
+                        The <span class="highlight">SEU Tech Innovation Day 2026</span> is a student-focused event designed to introduce practical ideas in web development, programming, cybersecurity, artificial intelligence, and emerging technologies.
+                    </p>
+                    <p>
+                        The event encourages students to learn through demonstrations, short talks, guided activities, and peer interaction. Participants can explore different technology tracks and identify areas for future study and project work.
+                    </p>
+                    <p>
+                        Official university information is available at
+                        <a href="https://www.seu.edu.bd" target="_blank" rel="noopener noreferrer">Southeast University</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="images/tech-event-banner.svg" alt="SEU Tech Event banner with laptop, code symbols, and technology icons">
+            </div>
+        </section>
+
+        <section id="topics" class="card">
+            <p class="eyebrow">Learning and participation</p>
+            <h2>Event Goals and Topic Plan</h2>
+            <div class="three-column-grid">
+                <article>
+                    <h3>Event Goals</h3>
+                    <ul>
+                        <li>Introduce students to current technology fields.</li>
+                        <li>Encourage practical learning and teamwork.</li>
+                        <li>Connect classroom knowledge with real web projects.</li>
+                        <li>Build confidence for future technical events.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>How to Participate</h3>
+                    <ol>
+                        <li>Read the event information and schedule.</li>
+                        <li>Select the preferred technology track.</li>
+                        <li>Complete the registration form.</li>
+                        <li>Attend the event on the selected date.</li>
+                    </ol>
+                </article>
+
+                <article>
+                    <h3>Technology Tracks</h3>
+                    <ul>
+                        <li>Web Development
+                            <ul>
+                                <li>HTML structure</li>
+                                <li>CSS styling</li>
+                                <li>JavaScript basics</li>
+                            </ul>
+                        </li>
+                        <li>Emerging Technology
+                            <ul>
+                                <li>Artificial Intelligence</li>
+                                <li>Cybersecurity</li>
+                                <li>Cloud Computing</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="schedule" class="card">
+            <p class="eyebrow">Event program</p>
+            <h2>Tech Event Schedule</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Session</th>
+                            <th>Venue</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td>Opening Session</td>
+                            <td>Seminar Hall</td>
+                            <td>Event overview and welcome</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td>Web Development Workshop</td>
+                            <td>Computer Lab 1</td>
+                            <td>HTML, CSS, and page structure</td>
+                        </tr>
+                        <tr>
+                            <td>12:30 PM</td>
+                            <td>AI and Emerging Tech Talk</td>
+                            <td>Seminar Hall</td>
+                            <td>AI tools and current trends</td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM</td>
+                            <td>Cybersecurity Activity</td>
+                            <td>Computer Lab 2</td>
+                            <td>Safe browsing and security basics</td>
+                        </tr>
+                        <tr>
+                            <td>3:30 PM</td>
+                            <td>Closing and Networking</td>
+                            <td>Auditorium Lobby</td>
+                            <td>Reflection, feedback, and networking</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="register" class="card registration-card">
+            <p class="eyebrow">Registration</p>
+            <h2>Register for the SEU Tech Event</h2>
+            <p class="section-intro">Complete the form below. Fields marked as required must be filled before submission.</p>
+
+            <form action="#" method="post">
+                <div class="form-grid">
+                    <div class="field-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="studentid">Student ID</label>
+                        <input type="text" id="studentid" name="studentid" placeholder="Enter your student ID" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="preferred-date">Preferred Date</label>
+                        <input type="date" id="preferred-date" name="preferred_date" required>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Preferred Session</legend>
+                    <label class="choice" for="morning">
+                        <input type="radio" id="morning" name="session" value="Morning" required>
+                        Morning Session
+                    </label>
+                    <label class="choice" for="afternoon">
+                        <input type="radio" id="afternoon" name="session" value="Afternoon">
+                        Afternoon Session
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Topics of Interest</legend>
+                    <label class="choice" for="web-track">
+                        <input type="checkbox" id="web-track" name="interest" value="Web Development">
+                        Web Development
+                    </label>
+                    <label class="choice" for="ai-track">
+                        <input type="checkbox" id="ai-track" name="interest" value="Artificial Intelligence">
+                        Artificial Intelligence
+                    </label>
+                    <label class="choice" for="security-track">
+                        <input type="checkbox" id="security-track" name="interest" value="Cybersecurity">
+                        Cybersecurity
+                    </label>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset" class="secondary-button">Clear Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Contact:</strong> cse.lab@seu.edu.bd</p>
+        <p>Prepared for CSE 472 &middot; Web and Internet Programming Lab &middot; Lab Report 2</p>
+    </footer>
+</body>
+</html>
