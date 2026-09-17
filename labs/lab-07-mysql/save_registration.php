@@ -40,11 +40,31 @@ $stmt->execute([
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main class="card">
-        <h1>Registration Saved</h1>
-        <p>Thank you, <?php echo htmlspecialchars($fullName); ?>. Your registration has been saved.</p>
-        <p><a href="registrations.php">View Saved Registrations</a></p>
-        <p><a href="index.php">Submit Another Registration</a></p>
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="eyebrow">Registration Complete</span>
+            <h1>Your Registration Was Saved</h1>
+            <p>The submitted workshop information has been inserted into the MySQL database.</p>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="card">
+            <span class="success-badge">Success</span>
+            <h1>Thank you, <?php echo htmlspecialchars($fullName); ?>!</h1>
+            <p>Your registration for <strong><?php echo htmlspecialchars($workshop); ?></strong> has been saved successfully.</p>
+            <p><strong>Student ID:</strong> <?php echo htmlspecialchars($studentId); ?><br>
+               <strong>Department:</strong> <?php echo htmlspecialchars($department); ?></p>
+
+            <div class="action-row">
+                <a class="secondary-link" href="registrations.php">View Saved Registrations</a>
+                <a class="secondary-link" href="index.php">Submit Another Registration</a>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>CSE472 Web and Internet Programming Lab • Registration stored using PHP PDO</p>
+    </footer>
 </body>
 </html>
