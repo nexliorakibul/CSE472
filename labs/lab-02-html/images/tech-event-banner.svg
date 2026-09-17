@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">SEU Tech Event Banner</title>
+  <desc id="desc">A blue technology themed illustration with a laptop, code symbols, circuit lines and event title.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d2f5e"/>
+      <stop offset="1" stop-color="#1f5eaa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="32" fill="url(#bg)"/>
+  <circle cx="1050" cy="120" r="90" fill="#ffffff" opacity="0.06"/>
+  <circle cx="140" cy="620" r="120" fill="#ffffff" opacity="0.05"/>
+  <g stroke="#9ec8ff" stroke-width="4" fill="none" opacity="0.75">
+    <path d="M120 150 H310 V220 H420"/>
+    <path d="M1080 540 H910 V470 H790"/>
+    <path d="M180 500 H300 V430 H390"/>
+    <circle cx="120" cy="150" r="8" fill="#9ec8ff"/>
+    <circle cx="1080" cy="540" r="8" fill="#9ec8ff"/>
+    <circle cx="180" cy="500" r="8" fill="#9ec8ff"/>
+  </g>
+  <g transform="translate(350 180)">
+    <rect x="0" y="0" width="500" height="310" rx="24" fill="#f7fbff"/>
+    <rect x="28" y="28" width="444" height="220" rx="14" fill="#102a4b"/>
+    <text x="70" y="110" font-family="monospace" font-size="54" font-weight="700" fill="#9ec8ff">&lt;/&gt;</text>
+    <text x="165" y="105" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#ffffff">SEU TECH EVENT</text>
+    <text x="165" y="153" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#dfe9f9">HTML • CSS • AI • Cybersecurity</text>
+    <rect x="95" y="270" width="310" height="24" rx="12" fill="#d6e5f7"/>
+    <rect x="155" y="294" width="190" height="14" rx="7" fill="#b8cce3"/>
+  </g>
+  <g fill="#ffffff" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="600" y="590" font-size="34" font-weight="700">Information &amp; Registration Page</text>
+    <text x="600" y="632" font-size="20" opacity="0.88">CSE 472 • Web and Internet Programming Lab</text>
+  </g>
+</svg>
